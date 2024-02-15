@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Prosto+One&display=swap');
+
+:root {
+    --main-bg-colour: lavender
+}
+
+* {
+
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    height: 5rem;
+    background-color: var(--main-bg-colour);
+    border: 2px solid purple;
+    padding: auto;
+    overflow: hidden;
+    }
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 12rem;
+    padding: 0px 25px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 5rem;
+
+
+}
+
+nav ul li {
+    list-style: none;
+    padding: 0px 25px;
+
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Prosto One', cursive;
+}
+
+nav ul li a:hover {
+    color: rgb(201, 156, 9);
+    font-weight: bold;
+}
+
+.container {
+    min-height: calc(100vh - 5rem - 3rem);
+    max-width: 100vw;
+    background-color: lavenderblush;
+    padding: 10px;
+}
+
+.slider {
+    max-width: 1000px;
+    position: relative;
+    margin: 15px auto auto auto;
+
+}
+
+.mySlides {
+    display: none;
+}
+
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(150, 123, 182, 0.8);
+}
+
+.text {
+    color: #f2f2f2;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 300;
+    font-size: 60px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 250px;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+.container2 {
+    width: 90%;
+    margin: 2rem auto;
+}
+
+p.heading {
+    text-align: center;
+    margin: 1vh auto;
+    font-family: 'Prosto One', cursive;
+    font-size: 30px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-row-gap: 15px;
+    grid-column-gap: 15px;
+}
+.gallery__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 5%;
+    border: 2px solid purple;
+    
+}
+.gallery__img:hover{
+    transform: scale(1.05);
+}
+
+.gallery__item--1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+
+}
+
+.gallery__item--2 {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
+
+}
+
+.gallery__item--3 {
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 3;
+
+
+}
+
+.gallery__item--4 {
+    grid-column-start: 7;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.gallery__item--5 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 5;
+}
+
+.gallery__item--6 {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 5;
+}
+
+.gallery__item--7 {
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-row-start: 3;
+    grid-row-end: 5;
+}
+
+.gallery__item--8 {
+    grid-column-start: 7;
+    grid-column-end: 9;
+    grid-row-start: 3;
+    grid-row-end: 5;
+}
+
+.categories ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+    overflow: hidden;
+}
+
+.categories ul li {
+    list-style: none;
+    padding: 0px 25px;
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    font-family: 'Prosto One', cursive
+}
+
+.category {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-row-gap: 15px;
+    grid-column-gap: 15px;
+}
+
+.category_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 5%;
+    border: 2px solid purple;
+
+}
+.category_img:hover{
+    transform: scale(1.1);
+}
+.category_img1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.category_img2 {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.category_img3 {
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.category_img4 {
+    grid-column-start: 7;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.category_img5 {
+    grid-column-start: 9;
+    grid-column-end: 11;
+    grid-row-start: 1;
+    grid-row-end: 3;
+
+}.category_img6 {
+    grid-column-start: 11;
+    grid-column-end: 13;
+    grid-row-start: 1;
+    grid-row-end: 3;
+
+}
+
+footer {
+    background-color: var(--main-bg-colour);
+    color: black;
+    height: 3rem;
+    border: 2px solid purple;
+    font-family: 'Prosto One', cursive;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+}
+
